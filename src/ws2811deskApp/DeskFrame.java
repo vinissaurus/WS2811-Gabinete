@@ -10,7 +10,7 @@ package ws2811deskApp;
  * @author Vinicius
  */
 public class DeskFrame extends javax.swing.JFrame {
-Cyclon cyclon=new Cyclon();
+Ciclone cyclon=new Ciclone();
     /**
      * Creates new form DeskFrame
      */
@@ -28,24 +28,38 @@ Cyclon cyclon=new Cyclon();
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        escolherModo = new javax.swing.JComboBox<>();
         jSeparator1 = new javax.swing.JSeparator();
         painelModos = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setText("MODO:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        escolherModo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ciclone", "Natal", "Fogo", "HUE", "Estático" }));
+        escolherModo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                escolherModoActionPerformed(evt);
             }
         });
 
         painelModos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         painelModos.setLayout(new javax.swing.BoxLayout(painelModos, javax.swing.BoxLayout.LINE_AXIS));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 492, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 422, Short.MAX_VALUE)
+        );
+
+        painelModos.add(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -57,7 +71,7 @@ Cyclon cyclon=new Cyclon();
                         .addContainerGap()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox1, 0, 455, Short.MAX_VALUE))
+                        .addComponent(escolherModo, 0, 455, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(painelModos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -69,7 +83,7 @@ Cyclon cyclon=new Cyclon();
             .addGroup(layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(escolherModo, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1, 1, 1)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -81,11 +95,12 @@ Cyclon cyclon=new Cyclon();
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void escolherModoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escolherModoActionPerformed
+painelModos.removeAll();
 painelModos.add(cyclon);
 //painelModos.p
 pack();
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_escolherModoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -123,8 +138,9 @@ pack();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> escolherModo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel painelModos;
     // End of variables declaration//GEN-END:variables

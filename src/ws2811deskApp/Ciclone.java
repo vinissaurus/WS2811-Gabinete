@@ -9,12 +9,12 @@ package ws2811deskApp;
  *
  * @author Vinicius
  */
-public class Cyclon extends javax.swing.JPanel {
+public class Ciclone extends javax.swing.JPanel {
 
     /**
      * Creates new form Cyclon
      */
-    public Cyclon() {
+    public Ciclone() {
         initComponents();
     }
 
@@ -36,14 +36,14 @@ public class Cyclon extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(272, Short.MAX_VALUE)
+                .addContainerGap(364, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
+                .addContainerGap(388, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(20, 20, 20))
         );
