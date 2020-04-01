@@ -19,4 +19,22 @@
  * 01                                                         52      |                  |
  * 00                                                         53      |                  |
  *    |71|70|69|68|67|66|65|64|63|62|61|60|59|58|57|56|55|54|         |__________________|
+ *    
+ *    Mapa da EEPROM:
+ *    0-Led ativo/inativo
+ *    1-Modo de animação:
+ *      0-Cyclon
+ *      1-Spinner
+ *      2-Fogo
+ *      3-Cyberpunk
+ *      4-Pulsação
+ *      5-Natal
+ *      6-Estático
+ *    [Modos que usam:  0  1   2   3   4   5   6
+ *    2-Parâmetro:
+ *    3               |   |   |   |   |   |   |   |
+ *    4               |   |   |   |   |   |   |   |
+ *    5               |   |   |   |   |   |   |   |
+ *    6               |   |   |   |   |   |   |   |
+ *      
  */
